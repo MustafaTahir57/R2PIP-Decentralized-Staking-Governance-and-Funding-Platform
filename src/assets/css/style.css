@@ -1,0 +1,229 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html{
+  scroll-behavior: smooth;
+}
+
+.header {
+  transform: scale(1);
+  transition: transform 0.7s;
+  position: relative;
+  text-decoration: none;
+}
+
+.header:hover {
+  cursor: pointer;
+  color: #c21b0c !important;
+  transform: scale(1.1);
+  text-decoration: none;
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: #c21b0c;
+  transition: width 0.4s;
+}
+
+.header:hover::after {
+  width: 100%;
+}
+
+
+
+
+.header-mob {
+
+  position: relative;
+  text-decoration: none;
+}
+
+.header-mob:hover {
+  cursor: pointer;
+  color: #c21b0c !important;
+  text-decoration: none !important;
+}
+
+.header-mob::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: #c21b0c;
+}
+
+.header-mob:hover::after {
+  width: fit-content;
+}
+
+/* The container element that scrolls */
+::-webkit-scrollbar {
+  width: 6px;
+  /* Adjust the width as needed */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+  /* Track color */
+}
+.bg-red2{
+  background-color: rgb(194 27 12 / 44%);
+}
+::-webkit-scrollbar-thumb {
+  background-color: #c21b0c;
+  /* Scrollbar color */
+  border-radius: 10px;
+  /* Rounded corners for the scrollbar */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a01709;
+  /* Darker color on hover */
+}
+
+/* Testimonials */
+
+.client {
+  background-image: url('/src/assets/img/testimonials_bg.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.client-Swiper {
+  overflow: hidden !important;
+  width: 49% !important;
+  max-height: 440px;
+}
+
+/* Change the previous and next buttons to red */
+.client-Swiper .swiper-button-prev:after,
+.client-Swiper .swiper-button-next:after {
+  font-size: 30px !important;
+  color: white !important;
+  /* Change the button color to red */
+  position: relative;
+  top: 100px;
+}
+
+.swiperSlide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden !important;
+}
+
+.swiperSlide img {
+  display: block;
+  object-fit: cover;
+}
+
+.client-Swiper .swiper-pagination-fraction,
+.client-Swiper .swiper-pagination-custom,
+.client-Swiper .swiper-horizontal>.client-Swiper .swiper-pagination-bullets,
+.client-Swiper .swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: var(--swiper-pagination-bottom, -5px);
+  top: var(--swiper-pagination-top);
+  left: 0;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .client-Swiper {
+    width: 70% !important;
+    min-height: 250px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .client-Swiper {
+    width: 55% !important;
+    max-height: 350px;
+  }
+
+  .textofintro {
+    text-align: initial !important;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .client-Swiper {
+    width: 95% !important;
+    max-height: 486px;
+  }
+
+  @media screen and (max-width: 700px) {
+    .client {
+      background-size: cover;
+      height: 480px !important;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .client-Swiper {
+    width: 100% !important;
+  }
+
+  .client-Swiper .swiper-pagination-fraction,
+  .client-Swiper .swiper-pagination-custom,
+  .client-Swiper .swiper-horizontal>.client-Swiper .swiper-pagination-bullets,
+  .client-Swiper .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: var(--swiper-pagination-bottom, 0px);
+    top: var(--swiper-pagination-top);
+    left: 0;
+    width: 100%;
+  }
+}
+
+
+/* For Webkit browsers like Chrome and Safari */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* For Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.error-message{
+  color: #bb1111;
+  /* margin-top: 5px; */
+}
+
+
+
+tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+tr:nth-child(even) {
+  background-color: #ecedf3;
+}
+
+.table-container {
+  box-shadow: 0 4px 8px #0000001a; /* Adds a shadow */
+  border-radius: 8px;
+  overflow: hidden; 
+}
+
+.table-container thead tr {
+  background-color: #c21b0c;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+  height: 60px;
+  font-size: larger;
+}
